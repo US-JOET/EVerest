@@ -13,7 +13,7 @@ Steps to build EVerest in a Yocto image
 #. Proceed with your usual Yocto development setup process, deciding on an
    image, BSP, and other layers suitable for your hardware.
 
-   -  We will be using ``core-image-base`` for our examples.
+   We will be using ``core-image-full-cmdline`` throughout this guide.
 
 #. Download a version of the |meta-everest layer|_
 
