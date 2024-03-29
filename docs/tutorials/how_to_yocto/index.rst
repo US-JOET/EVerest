@@ -2,8 +2,8 @@
 Notes on Yocto
 ==============
 
-Steps to building EVerest in a Yocto image
-==========================================
+Steps to build EVerest in a Yocto image
+=======================================
 
 #. Set up a Yocto development environment.
 
