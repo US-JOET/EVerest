@@ -7,9 +7,8 @@ Steps to build EVerest in a Yocto image
 
 #. Set up a Yocto development environment.
 
-   -  The `Yocto Project Quick
-      Build <https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html>`__
-      guide is an excellent place to start.
+   .. TIP::
+      The `Yocto Project Quick Build`_ guide is an excellent place to start.
 
 #. Proceed with your usual Yocto development setup process, deciding on an
    image, BSP, and other layers suitable for your hardware.
@@ -66,8 +65,7 @@ Steps to build EVerest in a Yocto image
    following is an example recipe that accomplishes this assuming that
    you're (a) using the MIT license for your layer that is created by
    ``bitbake-layers add-layer`` and (b) in a development environment
-   organized in the way specified in the `Yocto Project Quick
-   Build <https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html>`__
+   organized in the way specified in the `Yocto Project Quick Build`_
    guide.
 
    .. code:: shell
@@ -156,6 +154,8 @@ Steps to build EVerest in a Yocto image
           mosquitto \
           install-config \
           "
+
+.. _`Yocto Project Quick Build`: https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html
 
 .. |meta-everest layer| replace:: ``meta-everest`` layer
 .. _meta-everest layer: https://github.com/EVerest/meta-everest
