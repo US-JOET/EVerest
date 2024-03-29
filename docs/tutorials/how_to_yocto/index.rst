@@ -30,7 +30,7 @@ Steps to build EVerest in a Yocto image
       ``meta-everest``.
 
 #. Add ``meta-everest`` to your build. This is typically done either by
-   manually editing the ``conf/bblayers.conf`` or using the
+   manually editing ``conf/bblayers.conf`` or using the
    ``bitbake-layers add-layer path/to/layer`` command. As always, refer
    to the `Yocto
    documentation <https://docs.yoctoproject.org/4.0.17/dev-manual/layers.html>`__
