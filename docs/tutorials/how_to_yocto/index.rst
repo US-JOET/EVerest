@@ -16,11 +16,11 @@ Steps to build EVerest in a Yocto image
 
    -  We will be using ``core-image-base`` for our examples.
 
-#. Download a version of the ``meta-everest`` layer
+#. Download a version of the |meta-everest layer|_
 
-   -  The EVerest project includes a ```meta-everest``
-      layer <https://github.com/EVerest/meta-everest>`__ for building,
-      installing, and standing up an EVerest service.
+   .. TIP::
+      The EVerest project includes a |meta-everest layer|_ for baking EVerest
+      and its dependencies into a Yocto image.
 
    -  Clone the ``meta-everest`` layer into your Yocto build
       environment.
@@ -156,3 +156,6 @@ Steps to build EVerest in a Yocto image
           mosquitto \
           install-config \
           "
+
+.. |meta-everest layer| replace:: ``meta-everest`` layer
+.. _meta-everest layer: https://github.com/EVerest/meta-everest
