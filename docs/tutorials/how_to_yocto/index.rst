@@ -68,7 +68,7 @@ Steps to build EVerest in a Yocto image
    organized in the way specified in the `Yocto Project Quick Build`_
    guide.
 
-   .. code:: shell
+   .. code::
 
       SUMMARY = "Provide an EVerest configuration"
       DESCRIPTION = "Copy an EVerest configuration into an image"
@@ -110,7 +110,7 @@ Steps to build EVerest in a Yocto image
    tools, mbedTLS from OpenEmbedded's networking layer, and Python (a
    dependency of the latter).
 
-   .. code:: shell
+   .. code::
 
       BBLAYERS ?= " \
         /workdir/poky/meta \
@@ -131,7 +131,7 @@ Steps to build EVerest in a Yocto image
    your image by including it as a ``DISTRO_FEATURE`` in
    ``conf/local.conf``:
 
-   .. code:: shell
+   .. code::
 
       DISTRO_FEATURES:append = " systemd"
       DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
@@ -146,7 +146,7 @@ Steps to build EVerest in a Yocto image
    include ``tzdata`` to ensure timezone support is baked into the
    image.
 
-   .. code:: shell
+   .. code::
 
       IMAGE_INSTALL:append = "\
           tzdata \
