@@ -130,7 +130,7 @@ Steps to build EVerest in a Yocto image
    the image as a ``systemd`` service. Ensure ``systemd`` is enabled in
    your image by including it as a ``DISTRO_FEATURE`` in
    ``conf/local.conf``:
-
+_quickstartguide_main
    .. code::
 
       DISTRO_FEATURES:append = " systemd"
@@ -159,3 +159,30 @@ Steps to build EVerest in a Yocto image
 
 .. |meta-everest layer| replace:: ``meta-everest`` layer
 .. _meta-everest layer: https://github.com/EVerest/meta-everest
+
+
+Integrating Third-Party Modules
+===============================
+
+Sometimes you want to use EVerest to control hardware that lacks a board support module in EVerest.
+Sometimes you want to incorporate value-added services into your charger to distinguish yourself from the competition.
+And sometimes you just want to abuse EVerest's flexibility and use the platform to power a digital picture frame.
+Whatever your needs, you'll likely find yourself wanting to extend EVerest with custom modules at some point in your journey.
+
+The :ref:`module concept <detail_module_concept>`, :ref:`how modules are configured <existing_modules>`, and :ref:`how to build a custom module <tutorial_create_modules_main>` are covered in other sections of the documentation, as is a real-world example of :ref:`processing bank card payments <bank_transaction>`.
+If you still have questions regarding how to integrate custom EVerest modules into your Yocto image, then this is the section for you.
+
+Assumptions
+-----------
+#. You have a module called ``my-module`` that you wish to build and install into a Yocto image as part of a larger EVerest deployment.
+#. Thanks to a careful reading of the aforementioned module documentation and examples, your ``my-module`` module works as expected in an EVerest build using an EVerest configuration file called ``config.yaml``.
+
+Option 1: Patching ``my-module`` into the ``meta-everest`` Layer
+----------------------------------------------------------------
+#. Adapt the above guide to create an EVerest Yocto image for use with your hardware. This should include a ``meta-install-config`` BitBake layer as described above, but using the ``config.yaml`` that uses ``my-module``.
+
+..
+    TODO: Record how to add my-module into the EVerest build by patching the meta-everest layer
+
+..
+    TODO: Add a second section showing how to use a CMakeLists.txt akin to the one in tutorial_create_modules_main in order to build EVerest in a recipe from a new layer in a way that mirrors that tutorial.
