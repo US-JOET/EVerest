@@ -130,7 +130,6 @@ Steps to build EVerest in a Yocto image
    the image as a ``systemd`` service. Ensure ``systemd`` is enabled in
    your image by including it as a ``DISTRO_FEATURE`` in
    ``conf/local.conf``:
-_quickstartguide_main
    .. code::
 
       DISTRO_FEATURES:append = " systemd"
