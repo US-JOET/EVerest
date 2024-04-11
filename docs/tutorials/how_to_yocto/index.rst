@@ -6,7 +6,7 @@ Steps to build EVerest in a Yocto image
 =======================================
 
 #. Set up a Yocto development environment.
-
+TODO: Create more hand-holding steps, since it is not obvious what will need to be followed exactly and what won't.
    .. TIP::
       The `Yocto Project Quick Build`_ guide is an excellent place to start.
 
