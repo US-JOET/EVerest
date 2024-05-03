@@ -1,0 +1,9 @@
+settings:
+  telemetry_enabled: true
+
+active_modules:
+  serial_io:
+    module: SerialIO
+    config_module:
+      read_device: /tmp/vserial1
+      write_device: /tmp/vserial2

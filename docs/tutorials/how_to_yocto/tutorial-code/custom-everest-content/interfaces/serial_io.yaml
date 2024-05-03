@@ -1,0 +1,21 @@
+description: Support basic read and write access to a serial device.
+cmds:
+  read:
+    description: Read content from a serial device.
+    result:
+      description: The UTF-8-encoded bytes read from a serial device.
+      type: string
+
+  write:
+    description: Write content to a serial device.
+    arguments:
+      bytes:
+        description:
+          A UTF-8-encoded string to be decoded and written to a serial device.
+        type: string
+    result:
+      description: >-
+        The result of writing to the serial device. This should indicate
+        success or provide information on an error encountered during the write
+        process.
+      type: string

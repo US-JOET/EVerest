@@ -1,0 +1,31 @@
+description:
+  Read to and write from a serial device on demand.
+
+metadata:
+  license: https://spdx.org/licenses/Apache-2.0.html
+  authors:
+    - Edith Clarke, Energetic Engineering LLC
+
+config:
+  read_device:
+    description: >-
+      The terminal device file to read from.
+    type: string
+
+  write_device:
+    description: >-
+      The terminal device file to write to.
+    type: string
+
+  flush_on_read:
+    description: >-
+      Whether to flush the read_device file buffer after a successful read
+      command.
+    type: boolean
+    default: true
+
+provides:
+  serial_io:
+    interface: serial_io
+    description:
+      A simple module allowing for reading to and writing from a serial device.
