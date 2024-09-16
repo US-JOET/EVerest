@@ -2,19 +2,34 @@
 Notes on Yocto
 ==============
 
+
+Summary
+=======
+
+The EVerest project provides a Yocto layer called ```meta-everest``
+<https://github.com/EVerest/meta-everest>`__ to simplify the incorporation of
+EVerest into embedded Linux distributions. This guide provides an overview of
+how to incorporate this layer into a basic Linux distribution.
+
+.. IMPORTANT::
+   This guide assumes the reader is familiar with the Yocto Project and its
+   usage. Setting up a Yocto development environment, an introduction to core
+   Yocto concepts, BitBake usage, etc. are all outside the scope of this
+   tutorial.
+
+   If you are new to Yocto, the `Yocto Project's documentation
+   <https://docs.yoctoproject.org/index.html>`__ is an excellent place to start.
+
+
 Steps to building EVerest in a Yocto image
 ==========================================
 
-#. Set up a Yocto development environment.
+#. Proceed with your usual Yocto development setup process, deciding on a base
+   distribution, BSP, and other layers suitable for your hardware and
+   requirements.
 
-   -  The `Yocto Project Quick
-      Build <https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html>`__
-      guide is an excellent place to start.
-
-#. Proceed with your usual Yocto development setup process, deciding on an
-   image, BSP, and other layers suitable for your hardware.
-
-   -  We will be using ``core-image-base`` for our examples.
+   In this tutorial, we will be using the Poky reference distribution and
+   ``core-image-full-cmdline`` for our examples.
 
 #. Download a version of the ``meta-everest`` layer
 
@@ -33,8 +48,8 @@ Steps to building EVerest in a Yocto image
 #. Add ``meta-everest`` to your build. This is typically done either by
    manually editing the ``conf/bblayers.conf`` or using the
    ``bitbake-layers add-layer path/to/layer`` command. As always, refer
-   to the `Yocto
-   documentation <https://docs.yoctoproject.org/4.0.17/dev-manual/layers.html>`__
+   to the `Yocto documentation
+   <https://docs.yoctoproject.org/4.0.17/dev-manual/layers.html>`__
    for more details.
 
 #. Configure EVerest in a custom layer The ``meta-everest`` layer does
